@@ -4,7 +4,7 @@ on:
   pull_request:
     branches: [master]
     paths-ignore:
-      - '**.md'
+      - "**.md"
 jobs:
   test:
     name: test
@@ -12,16 +12,16 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        go: ['1.20']
+        go: ["1.20"]
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Go
-        uses: actions/setup-go@v4
+        uses: actions/setup-go@v5
         with:
-          go-version: '1.20'
+          go-version: "1.24"
           cache: false
 
       - name: golangci-lint
