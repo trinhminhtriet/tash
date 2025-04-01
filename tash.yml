@@ -1,0 +1,44 @@
+disable_verify_host: true
+
+import:
+  - ./servers.yaml
+
+env:
+  NO_COLOR: true
+
+targets:
+  all:
+    all: true
+
+specs:
+  default:
+      output: table
+      strategy: linear
+      batch: 1
+
+  table:
+    output: table
+
+  text:
+    output: text
+
+  info:
+      output: table
+      strategy: free
+      ignore_errors: true
+      ignore_unreachable: true
+      any_errors_fatal: false
+
+themes:
+    default:
+        text:
+            prefix: "{{ .Host }}"
+            header: '{{ .Style "TASK" "bold" }}{{ if ne .NumTasks 1 }} ({{ .Index }}/{{ .NumTasks }}){{end}}{{ if and .Name .Desc }} [{{.Style .Name "bold"}}: {{ .Desc }}] {{ else if .Name }} [{{ .Name }}] {{ else if .Desc }} [{{ .Desc }}] {{end}}'
+        table:
+            prefix: "{{ .Host }}"
+
+tasks:
+  ping:
+    target: all
+    desc: ping server
+    cmd: echo pong
