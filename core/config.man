@@ -546,10 +546,10 @@ See GitHub Issues:
 .SH AUTHOR
 
 .B tash
-was written by Samir Alajmovic
-.MT alajmovic.samir@gmail.com
+was written by Triet Trinh
+.MT contact@trinhminhtriet.com
 .ME .
 For updates and more information go to
-.UR https://\:www.sakecli.com
-sakecli.com
+.UR https://\:www.trinhminhtriet.com
+trinhminhtriet.com
 .UE .
