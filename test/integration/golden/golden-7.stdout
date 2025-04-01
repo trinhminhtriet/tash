@@ -1,0 +1,12 @@
+Index: 7
+Name: List servers filter on inventory hosts
+Cmd: export TASH_USER_CONFIG="$PWD/../user-config.yaml" && go run ../../main.go list servers inv
+WantErr: false
+
+---
+
+ server | host       | tags                      | desc                       
+--------+------------+---------------------------+----------------------------
+ inv-0  | 172.24.2.2 | remote,prod,inv,reachable | many hosts using inventory 
+ inv-1  | 172.24.2.4 | remote,prod,inv,reachable | many hosts using inventory 
+

@@ -1,0 +1,64 @@
+Index: 0
+Name: List tags
+Cmd: export TASH_USER_CONFIG="$PWD/../user-config.yaml" && go run ../../main.go list tags
+WantErr: false
+
+---
+
+ tag         | server      
+-------------+-------------
+ local       | localhost   
+ reachable   | localhost   
+             | list-0      
+             | list-1      
+             | range-0     
+             | range-1     
+             | inv         
+             | server-1    
+             | server-2    
+             | server-3    
+             | server-4    
+             | server-5    
+             | server-6    
+             | server-7    
+             | server-8    
+             | server-9    
+ unreachable | unreachable 
+ remote      | list-0      
+             | list-1      
+             | range-0     
+             | range-1     
+             | inv         
+             | server-1    
+             | server-2    
+             | server-3    
+             | server-4    
+             | server-5    
+             | server-6    
+             | server-7    
+             | server-8    
+             | server-9    
+             | server-10   
+             | server-11   
+ prod        | list-0      
+             | list-1      
+             | range-0     
+             | range-1     
+             | inv         
+             | server-1    
+             | server-2    
+ list        | list-0      
+             | list-1      
+ range       | range-0     
+             | range-1     
+ inv         | inv         
+ demo        | server-3    
+             | server-4    
+             | server-7    
+             | server-8    
+             | server-9    
+ sandbox     | server-5    
+             | server-6    
+ bastion     | server-10   
+             | server-11   
+

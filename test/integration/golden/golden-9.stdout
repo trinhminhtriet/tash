@@ -1,0 +1,11 @@
+Index: 9
+Name: Describe targets
+Cmd: export TASH_USER_CONFIG="$PWD/../user-config.yaml" && go run ../../main.go describe targets
+WantErr: false
+
+---
+name: all
+all: true
+
+--
+

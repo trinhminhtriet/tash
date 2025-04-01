@@ -1,0 +1,15 @@
+Index: 37
+Name: unreachable false
+Cmd: export TASH_USER_CONFIG="$PWD/../user-config.yaml" && go run ../../main.go run unreachable -q -a
+WantErr: true
+
+---
+
+                                                                                              
+ Unreachable Hosts                                                                            
+                                                                                              
+ server      | host        | user | port | error                                              
+-------------+-------------+------+------+----------------------------------------------------
+ unreachable | 172.24.2.50 | test | 22   | dial tcp 172.24.2.50:22: connect: no route to host 
+
+exit status 4

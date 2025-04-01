@@ -1,0 +1,12 @@
+Index: 6
+Name: List servers filter on range hosts
+Cmd: export TASH_USER_CONFIG="$PWD/../user-config.yaml" && go run ../../main.go list servers range
+WantErr: false
+
+---
+
+ server  | host       | tags                        | desc                   
+---------+------------+-----------------------------+------------------------
+ range-0 | 172.24.2.2 | remote,prod,range,reachable | many hosts using range 
+ range-1 | 172.24.2.4 | remote,prod,range,reachable | many hosts using range 
+

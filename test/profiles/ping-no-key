@@ -1,0 +1,4 @@
+Benchmark 1: ../dist/tash run ping -s server-9
+  Time (mean ± σ):     139.8 ms ±  31.8 ms    [User: 8.7 ms, System: 9.4 ms]
+  Range (min … max):   106.4 ms … 199.5 ms    10 runs
+ 

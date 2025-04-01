@@ -1,0 +1,4 @@
+Benchmark 1: ../dist/tash run ping --forks=1 -t reachable
+  Time (mean ± σ):     578.6 ms ±  22.1 ms    [User: 351.1 ms, System: 31.7 ms]
+  Range (min … max):   552.7 ms … 613.5 ms    10 runs
+ 

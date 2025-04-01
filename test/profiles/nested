@@ -1,0 +1,4 @@
+Benchmark 1: ../dist/tash run d --forks=1 -t reachable
+  Time (mean ± σ):     544.8 ms ±  21.1 ms    [User: 408.1 ms, System: 62.8 ms]
+  Range (min … max):   505.6 ms … 568.8 ms    10 runs
+ 

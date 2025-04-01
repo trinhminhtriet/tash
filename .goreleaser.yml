@@ -1,0 +1,70 @@
+project_name: tash
+
+before:
+  hooks:
+    - go mod download
+
+builds:
+  - binary: tash
+    id: tash
+    ldflags: -s -w -X github.com/trinhminhtriet/tash/cmd.version={{ .Version }} -X github.com/trinhminhtriet/tash/cmd.commit={{ .ShortCommit }} -X github.com/trinhminhtriet/tash/cmd.date={{ .Date }}
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - darwin
+      - linux
+      - windows
+      - freebsd
+      - netbsd
+      - openbsd
+    goarch:
+      - amd64
+      - 386
+      - arm
+      - arm64
+    goarm:
+      - 7
+
+    ignore:
+      - goos: freebsd
+        goarch: arm
+      - goos: freebsd
+        goarch: arm64
+
+      - goos: openbsd
+        goarch: arm
+      - goos: openbsd
+        goarch: arm64
+
+      - goos: darwin
+        goarch: arm
+      - goos: darwin
+        goarch: 386
+
+      - goos: windows
+        goarch: arm
+      - goos: windows
+        goarch: arm64
+
+archives:
+  - id: 'tash'
+    builds: ['tash']
+    format: tar.gz
+    format_overrides:
+      - goos: windows
+        format: zip
+    name_template: '{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}'
+    files:
+      - LICENSE
+      - src: 'core/tash.1'
+        dst: '.'
+        strip_parent: true
+
+checksum:
+  name_template: 'checksums.txt'
+
+snapshot:
+  name_template: '{{ .Tag }}'
+
+changelog:
+  skip: true

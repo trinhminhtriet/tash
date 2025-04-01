@@ -1,0 +1,29 @@
+Index: 11
+Name: Describe servers filter on list hosts
+Cmd: export TASH_USER_CONFIG="$PWD/../user-config.yaml" && go run ../../main.go describe servers list
+WantErr: false
+
+---
+
+name: list-0
+group: list
+desc: many hosts using list
+user: test
+host: 172.24.2.2
+port: 22
+tags: remote, prod, list, reachable
+env: 
+    hello: world
+
+--
+
+name: list-1
+group: list
+desc: many hosts using list
+user: test
+host: 172.24.2.4
+port: 22
+tags: remote, prod, list, reachable
+env: 
+    hello: world
+

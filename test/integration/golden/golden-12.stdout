@@ -1,0 +1,29 @@
+Index: 12
+Name: Describe servers filter on range hosts
+Cmd: export TASH_USER_CONFIG="$PWD/../user-config.yaml" && go run ../../main.go describe servers range
+WantErr: false
+
+---
+
+name: range-0
+group: range
+desc: many hosts using range
+user: test
+host: 172.24.2.2
+port: 22
+tags: remote, prod, range, reachable
+env: 
+    hello: world
+
+--
+
+name: range-1
+group: range
+desc: many hosts using range
+user: test
+host: 172.24.2.4
+port: 22
+tags: remote, prod, range, reachable
+env: 
+    hello: world
+

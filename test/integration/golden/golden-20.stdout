@@ -1,0 +1,31 @@
+Index: 20
+Name: Filter by host regex
+Cmd: export TASH_USER_CONFIG="$PWD/../user-config.yaml" && go run ../../main.go run info -q -r '172.24.2.(2|4)'
+WantErr: false
+
+---
+
+TASKS 
+
+ host       | OS | Kernel 
+------------+----+--------
+ 172.24.2.2 | OS | kernel 
+ 172.24.2.4 | OS | kernel 
+ 172.24.2.2 | OS | kernel 
+ 172.24.2.4 | OS | kernel 
+ 172.24.2.2 | OS | kernel 
+ 172.24.2.4 | OS | kernel 
+ 172.24.2.2 | OS | kernel 
+ 172.24.2.4 | OS | kernel 
+                                                                      
+ 172.24.2.2      ok=2   unreachable=0  ignored=0  failed=0  skipped=0 
+ 172.24.2.4      ok=2   unreachable=0  ignored=0  failed=0  skipped=0 
+ 172.24.2.2      ok=2   unreachable=0  ignored=0  failed=0  skipped=0 
+ 172.24.2.4      ok=2   unreachable=0  ignored=0  failed=0  skipped=0 
+ 172.24.2.2      ok=2   unreachable=0  ignored=0  failed=0  skipped=0 
+ 172.24.2.4      ok=2   unreachable=0  ignored=0  failed=0  skipped=0 
+ 172.24.2.2      ok=2   unreachable=0  ignored=0  failed=0  skipped=0 
+ 172.24.2.4      ok=2   unreachable=0  ignored=0  failed=0  skipped=0 
+----------------------------------------------------------------------
+ Total           ok=16  unreachable=0  ignored=0  failed=0  skipped=0 
+
